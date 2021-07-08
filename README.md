@@ -4,7 +4,7 @@
 ### **Language:** Python/CSS/HTML
 ### **Last edit:** 07/08/2021
 ### **Purpose:**  
-Website made to play basic games on.  It is still in version 0.  Website will be made after 2-3 games are made.
+Website made to play basic games on.  It is still in version 0.  Website will updated after 2-3 games are made.
 ### **Important skills:**  
 Python3: Flask  
 CSS  
