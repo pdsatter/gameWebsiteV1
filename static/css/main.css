@@ -36,7 +36,14 @@ body{
 #timer{
     height: 40px;
     width: 60px;
-    margin-left: 650px;
+    margin-left: 400px;
+    margin-top: 0px;
+    font-size: 40px;
+}
+#highScore{
+    height: 40px;
+    width: 60px;
+    margin-left: 40px;
     margin-top: 0px;
     font-size: 40px;
 }

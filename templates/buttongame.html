@@ -8,17 +8,18 @@
     <h1><center>Button Game</center></h1>
     <br>
     <br>
-
-
-    <label id="scoreLabel">0</label>
     <script>
+        var highScore = 0;
         var score = 0;
         var xpos = 500;
         var ypos = 300;
+        var count = 0;
         document.getElementById("scoreLabel").innerHTML = score;
     </script>
 
-    <label id="timer">10 seconds</label>
+    <label id="scoreLabel">Score: 0</label>
+    <label id="highScore">High Score: 0</label>
+    <label id="timer">30 seconds</label>
     <div id="buttonGame">
         <button id="buttonMain"></button>
 
@@ -43,14 +44,32 @@
     function getScore(){
         return score;
     }
+    function timer(){
+        var sec = 30;
+        var timer = setInterval(function(){
+        document.getElementById('timer').innerHTML=sec + ' seconds';
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+            if (score > highScore){
+                highScore = score;
+                document.getElementById('highScore').innerHTML ='High Score:' + highScore.toString();
+            }
+            score = 0;
+            count = 0;
+
+        }
+    }, 1000);
+}
     function moveBtn(){
         xpos = getxpos();
         ypos = getypos();
         buttonMainID.style.marginLeft = xpos;
         buttonMainID.style.marginTop = ypos;
         score += 1;
-        document.getElementById("scoreLabel").innerHTML = getScore()
+        document.getElementById("scoreLabel").innerHTML = 'Score: ' + getScore()
         console.log(xpos,ypos);
+        if (count == 0){timer(); count++;}
     }
     </script>
 
