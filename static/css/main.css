@@ -5,6 +5,38 @@ h1{
     font-size: 40px;
 }
 body{
+    padding: 20px;
+    margin: 20px;
+    background: radial-gradient(white, mediumpurple);
     font-size: 20px;
+    height: 100vh;
+}
+#buttonGame{
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 600px;
+    border: 1px solid black;
+}
 
+#buttonMain{
+    background-color: red;
+    height: 40px;
+    width: 40px;
+
+}
+#score{
+    height: 40px;
+    width: 60px;
+    margin-left: 220px;
+    margin-top: 40px;
+    font-size: 40px;
+}
+#timer{
+    height: 40px;
+    width: 60px;
+    margin-left: 650px;
+    margin-top: 0px;
+    font-size: 40px;
 }

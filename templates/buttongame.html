@@ -5,8 +5,19 @@
 {% endblock %}
 
 {%  block body %}
-<h1><c>Button Game</c></h1>
-Description: See how many buttons you can click in a certain amount of time!
+    <h1><center>Button Game</center></h1>
+    <br>
+    <br>
+    <label id="scoreLabel">0</label>
+    <script type ="text/javascript" id="scoreScript">
+        document.getElementById("scoreLabel").innerHTML = score;
+    </script>
+    <label id="timer">10 seconds</label>
+    <div id="buttonGame">
+        <button id="buttonMain"></button>
 
+    </div>
+    <br>
+    Description: See how many buttons you can click in a certain amount of time!
 {% endblock %}
 
