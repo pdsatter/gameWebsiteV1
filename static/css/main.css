@@ -21,9 +21,9 @@ body{
 }
 
 #buttonMain{
-    background-color: red;
     height: 40px;
     width: 40px;
+    background: white;
 
 }
 #scoreLabel{
