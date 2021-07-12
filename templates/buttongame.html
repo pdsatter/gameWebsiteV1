@@ -8,16 +8,52 @@
     <h1><center>Button Game</center></h1>
     <br>
     <br>
+
+
     <label id="scoreLabel">0</label>
-    <script type ="text/javascript" id="scoreScript">
+    <script>
+        var score = 0;
+        var xpos = 500;
+        var ypos = 300;
         document.getElementById("scoreLabel").innerHTML = score;
     </script>
+
     <label id="timer">10 seconds</label>
     <div id="buttonGame">
         <button id="buttonMain"></button>
 
     </div>
     <br>
+    <script>
+    var buttonMainID = document.getElementById('buttonMain');
+
+    document.getElementById('buttonMain').addEventListener('click', moveBtn);
+
+    function getxpos(){
+        xpos = Math.floor((Math.random() * (1000-40)));
+        xpos = xpos.toString() + 'px';
+        return xpos;
+    }
+    function getypos(){
+        ypos = Math.floor((Math.random() * (600 -40)));
+        ypos = ypos.toString() + 'px';
+        return ypos;
+    }
+
+    function getScore(){
+        return score;
+    }
+    function moveBtn(){
+        xpos = getxpos();
+        ypos = getypos();
+        buttonMainID.style.marginLeft = xpos;
+        buttonMainID.style.marginTop = ypos;
+        score += 1;
+        document.getElementById("scoreLabel").innerHTML = getScore()
+        console.log(xpos,ypos);
+    }
+    </script>
+
     Description: See how many buttons you can click in a certain amount of time!
 {% endblock %}
 

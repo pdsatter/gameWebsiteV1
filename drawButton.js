@@ -1,14 +1,14 @@
-var buttonMain = document.getElementById('buttonMain');
+var buttonMainID = document.getElementById('buttonMain');
 var score = 1;
 var xpos = 500;
 var ypos = 300;
 
-buttonMain.addEventListener('click', moveBtn);
+buttonMainID.addEventListener('click', moveBtn);
 function moveBtn(){
     xpos = getxpos();
     ypos = getypos();
-    buttonMain.style.marginLeft = xpos;
-    buttonMain.style.marginTop = ypos;
+    buttonMainID.style.marginLeft = xpos;
+    buttonMainID.style.marginTop = ypos;
     score += 1;
     console.log(xpos,ypos);
 }
