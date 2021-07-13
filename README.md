@@ -9,6 +9,7 @@ Website made to play basic games on.  It is still in version 0.  Website will up
 Python3: Flask  
 CSS  
 HTML  
+JavaScript  
 
 ### **Description:**  
 Website used to play games on.  It is just a fun way to gain experience using Flask and Pygame.
