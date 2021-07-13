@@ -15,11 +15,11 @@ JavaScript
 Website used to play games on.  It is just a fun way to gain experience using Flask and Pygame.
 
 ### **Features:** 
-
+Button Game: Wack-A-Mole like game that has the features: timer, score, and highscore.
 
 ### **Future Features:**  
 Redirect to page of each game  
-Multiple games to play.  Ideas are: Snake game, buttonClicker (outline finished and posted), minesweeper, cookie clicker
+Multiple games to play.  Ideas are: Snake game, minesweeper, cookie clicker
 
 Thanks for your interest in this project,  
 -pdsatter
