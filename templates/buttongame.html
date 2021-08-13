@@ -9,11 +9,11 @@
     <br>
     <br>
     <script>
-        var highScore = 0;
-        var score = 0;
-        var xpos = 500;
-        var ypos = 300;
-        var count = 0;
+        let highScore = 0;
+        let score = 0;
+        let xpos = 500;
+        let ypos = 300;
+        let count = 0;  // tracks if timer has started.  1 = true 0 = false
         document.getElementById("scoreLabel").innerHTML = score;
     </script>
 
@@ -32,45 +32,57 @@
 
     document.getElementById('buttonMain').addEventListener('click', moveBtn);
 
+    //generates new x position
     function getxpos(){
         xpos = Math.floor((Math.random() * (1000-40)));
         xpos = xpos.toString() + 'px';
         return xpos;
     }
+        
+    //generates new y position
     function getypos(){
         ypos = Math.floor((Math.random() * (600 -40)));
         ypos = ypos.toString() + 'px';
         return ypos;
     }
-
+        
+    //returns score
     function getScore(){
         return score;
     }
+    
+    //starts timer and counts down
     function timer(){
-        var sec = 30;
+        var sec = 30;  //starting time to count down
         var timer = setInterval(function(){
         document.getElementById('timer').innerHTML=sec + ' seconds';
         sec--;
         if (sec < 0) {
-            clearInterval(timer);
-            if (score > highScore){
+            clearInterval(timer); // resets timer
+            if (score > highScore){  // creates new high score if current score beats high score
                 highScore = score;
                 document.getElementById('highScore').innerHTML ='High Score: ' + highScore.toString();
             }
+            //reset default values
             score = 0;
             count = 0;
 
         }
     }, 1000);
 }
+    //moves button when button is clicked on
     function moveBtn(){
+        // generates new x and y pos
         xpos = getxpos();
         ypos = getypos();
+        // moves button to x and y pos
         buttonMainID.style.marginLeft = xpos;
         buttonMainID.style.marginTop = ypos;
-        score += 1;
+        score += 1; 
+        //updates score in html element
         document.getElementById("scoreLabel").innerHTML = 'Score: ' + getScore()
         console.log(xpos,ypos);
+        //starts timer if it's first click
         if (count == 0){timer(); count++;}
     }
     </script>
